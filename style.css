@@ -1,0 +1,86 @@
+body {
+    background-image: url(https://images.squarespace-cdn.com/content/v1/664c7ae50eea9c731b37e817/affba656-d015-4b96-a8ba-3ef5bbbc2c39/OBMC+MONTESSORI+GH+-+AY+2026+FA.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.description {
+    font-size: 110%;
+    line-height: 1.8;
+}
+
+.page { display: none; }
+#home { display: block; }
+body:has(.page:target:not(#home)) #home { display: none; }
+#home:target,
+.page:target { display: block; }
+
+body:not(:has(.page:target)) a[href="#home"],
+body:has(#home:target) a[href="#home"],
+body:has(#about:target) a[href="#about"],
+body:has(#enroll:target) a[href="#enroll"],
+body:has(#contact:target) a[href="#contact"] {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.enroll-title {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.enroll-subtitle {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.enroll-card {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+.enroll-card h5 {
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.enroll-card label {
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.enroll-card .form-control,
+.enroll-card .form-select {
+    font-size: 13px;
+}
+
+.enroll-footer {
+    background-color: #272727;
+    color: white;
+    text-align: center;
+    font-size: 11px;
+    padding: 5px;
+    margin: 25px auto;
+    width: 100%;
+    max-width: 1000px;
+    box-sizing: border-box;
+}
+#home > .row,
+#about > .row {
+    min-height: calc(100vh - 180px);
+    align-items: center;
+    justify-content: center;
+}
